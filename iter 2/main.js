@@ -88,11 +88,15 @@ const poisonousCompounds = {
 
 const toString = function (object) {
     // TODO: Your code here
-    const str=[];
+    let str="";
+    let i=0;
     for(keys in object){
-        str.push(object[keys]);
+        if(i!==0){
+        str += ', '+object[keys];
+        }else{str += object[keys];}
+        i++;
     }
-    return str.join(", ");
+    return str;
   };
 
 //7. Write a function totalBill that accepts an object representing separate bills and returns the sum of all bills.
