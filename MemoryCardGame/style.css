@@ -1,0 +1,62 @@
+body{
+    background-color: rgb(255, 171, 210);
+}
+img{
+    width: 80px;
+    height: 80px;
+}
+h1{
+    text-align: center;
+    margin-top: 50px;
+    font-family: cursive;
+    
+    font-size: xxx-large;
+}
+#page{
+    margin: auto;
+    width: 42%;
+    border: 3px solid rgb(16, 20, 16);
+    padding: 10px;
+}
+button{
+    background-color: rgb(240, 85, 150);
+    border-radius: 10%;
+    align-items: center;
+    
+}
+#startButton{
+    height: 50px;
+    width: 150px;
+    background-color: rgb(68, 36, 49);
+    color: aliceblue;
+    border-color: aliceblue;
+    border-radius: 10%;
+    font-size: xx-large;
+    font-family: cursive;
+
+}
+
+#game{
+    height: 250px;
+    width: 550px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    justify-items: end;
+    align-items: flex-end;
+}   
+
+#start{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: flex-end;
+}
+
+#startButton:hover{
+    background-color: aliceblue;
+    color: rgb(68, 36, 49);
+    border-color: rgb(68, 36, 49);
+}
