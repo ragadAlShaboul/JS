@@ -31,7 +31,7 @@ button{
     color: aliceblue;
     border-color: aliceblue;
     border-radius: 10%;
-    font-size: xx-large;
+    font-size: inherit;
     font-family: cursive;
 
 }
@@ -41,22 +41,34 @@ button{
     width: 550px;
     display: flex;
     flex-wrap: wrap;
-    align-content: center;
     justify-content: space-between;
     justify-items: end;
     align-items: flex-end;
 }   
-
+#score{
+    text-align: center;
+}
+#status{
+    text-align: center;
+}
 #start{
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    justify-self: flex-end;
+    position: relative;
+    top: 10px;
 }
 
 #startButton:hover{
     background-color: aliceblue;
     color: rgb(68, 36, 49);
     border-color: rgb(68, 36, 49);
+}
+#statusDiv{
+    border-block: inherit;
+    font-size: larger;
+    position: relative;
+    top: 10px;
+    font-family: cursive;
 }
