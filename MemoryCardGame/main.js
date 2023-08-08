@@ -19,7 +19,14 @@ const statusDiv = document.createElement("div");
 page.appendChild(statusDiv);
 statusDiv.appendChild(status);
 statusDiv.appendChild(scoreDiv);
-let score = 0;
+let score = localStorage.getItem("score");
+function pausecomp(millis) {
+  var date = new Date();
+  var curDate = null;
+  do {
+    curDate = new Date();
+  } while (curDate - date < millis);
+}
 const shuffle = function (array) {
   const myArray = array.sort(() => Math.random() - 0.5);
   console.log(photos);
@@ -49,7 +56,7 @@ const hide = function () {
     const image = document.getElementById(`image ${i}`);
     image.src = "q.png";
   });
-};
+}
 const HandleClicks = function () {
   let button = document.getElementById("00");
   let right = 0;
@@ -76,7 +83,8 @@ const HandleClicks = function () {
         setTimeout(() => {
           images[ids0[ids0.length - 1]].src = "q.png";
           images[ids0[ids0.length - 2]].src = "q.png";
-        }, 100);
+        }, 500);
+        
         failure++;
       }
       if (right === photos.length / 2) {
@@ -93,6 +101,7 @@ const HandleClicks = function () {
   }
 };
 const play = function () {
+  
   game.innerHTML = "";
   shuffle(photos);
   console.log(photos);
@@ -118,5 +127,6 @@ const displayScore = function (str) {
   scoreDiv.id = "score";
   status.id = "status";
   statusDiv.id = "statusDiv";
+  localStorage.setItem("score", score);
 };
 play();

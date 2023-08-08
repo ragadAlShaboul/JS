@@ -14,9 +14,13 @@ h1{
 }
 #page{
     margin: auto;
-    width: 42%;
+    width: fit-content;
     border: 3px solid rgb(16, 20, 16);
     padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
 }
 button{
     background-color: rgb(240, 85, 150);
@@ -66,7 +70,7 @@ button{
     border-color: rgb(68, 36, 49);
 }
 #statusDiv{
-    border-block: inherit;
+    
     font-size: larger;
     position: relative;
     top: 10px;
